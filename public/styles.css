@@ -1,31 +1,38 @@
+/* public/styles/styles.css */
+
+/* Apply a background color to the whole page */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light AliceBlue background color */
+    font-family: Arial, sans-serif; /* Set a default font */
+    color: #333; /* Dark gray text color for better readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
+/* Style for the main container */
+.container {
+    width: 80%;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding */
+    background-color: #ffffff; /* White background for the content area */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
 
-main {
-    padding: 20px;
+/* Style for headings */
+h1, h2 {
+    color: #004d99; /* Dark blue color for headings */
 }
 
-h2 {
-    color: #333;
-}
-
+/* Style for list items */
 ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* Remove default list bullets */
+    padding: 0; 
 }
 
 li {
-    margin-bottom: 10px;
-}
-
-strong {
-    color: #555;
+    margin-bottom: 10px; /* Add space between list items */
+    padding: 10px; /* Add padding to list items */
+    border: 1px solid #ddd; /* Light gray border for list items */
+    border-radius: 4px; /* Slightly rounded corners for list items */
 }

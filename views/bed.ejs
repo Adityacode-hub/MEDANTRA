@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bed List</title>
+    <link rel="stylesheet" href="/style3.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h1>Bed List</h1>
+        
+        <!-- Bed Section -->
+        <div>
+          
+            <ul>
+                <% bed.forEach(bed => { %>
+                    <li>
+                        <strong>Bed Number:</strong> <%= bed.bed_number %><br>
+                        <strong>Ward:</strong> <%= bed.ward_id %><br>
+                        <strong>Status:</strong> <%= bed.is_Occupied ? 'Occupied' : 'Available' %>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

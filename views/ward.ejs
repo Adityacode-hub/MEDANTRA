@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>WARD List</title>
+     
+      <link rel="stylesheet" href="/style3.css"> 
+  </head>
+  <body>
+    <div>
+      <h1>Ward List</h1>
+      <ul>
+          <% ward.forEach(ward => { %>
+              <li>
+                  <strong>Ward:</strong> <%= ward.name %><br>
+                  <strong>Location:</strong> <%= ward.location %><br>
+                  <strong>BEDS:</strong> <%= ward.total_beds %><br>
+                  <strong>ADMIN_ID:</strong> <%= ward.admin_id %>
+              </li>
+          <% }) %>
+      </ul>
+      </div>
+  </body>
+  </html>

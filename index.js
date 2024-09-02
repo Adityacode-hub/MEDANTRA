@@ -20,24 +20,26 @@ app.use(express.static(path.join(__dirname,'public')));//using the css
 
 app.get("/",(req,res)=>{res.send("root is working")});
 app.get("/ward",async(req,res)=>{
-    let ward= await Ward.find();
+    let ward= await Ward.find({});
     console.log(ward);
-    res.render("index.ejs",{ward});
+    res.render("ward.ejs",{ward});
 
 })
 
 app.get("/bed",async(req,res)=>{
-    let bed= await Bed.find();
+    let bed= await Bed.find({});
     console.log(bed);
-    res.render("index.ejs",{bed});
+    res.render("bed.ejs",{bed});
 
 })
 app.get("/admin",async(req,res)=>{
-    let admin= await Admin.find();
+    let admin= await Admin.find({});
     console.log(admin);
+    console.log("no error");
     res.render("index.ejs",{admin});
 
 })
+
 
 app.listen(3030,()=>{console.log("server is listening to port 3030");});
 
