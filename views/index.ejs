@@ -1,0 +1,133 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hospital Management System</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Admins</h2>
+            <ul>
+                <% admin.forEach(admin => %> <%{ %>
+                    <li>
+                        <strong>Name:</strong> <%= admin.name %><br>
+                        <strong>Email:</strong> <%= admin.email %><br>
+                        <strong>Contact Number:</strong> <%= admin.contact_number %><br>
+                        <strong>Wards:</strong>
+                        <ul>
+                            <% admin.ward_ids.forEach(ward => { %>
+                                <li><%= ward.name %> - <%= ward.location %></li>
+                            <% }) %>
+                        </ul>
+                    </li>
+                <% }) %>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Wards</h2>
+            <ul>
+                <% wards.forEach(ward => { %>
+                    <li>
+                        <strong>Name:</strong> <%= ward.name %><br>
+                        <strong>Location:</strong> <%= ward.location %><br>
+                        <strong>Total Beds:</strong> <%= ward.total_beds %><br>
+                        <strong>Admin:</strong> <%= ward.admin_id.name %><br>
+                    </li>
+                <% }) %>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Beds</h2>
+            <ul>
+                <% beds.forEach(bed => { %>
+                    <li>
+                        <strong>Bed Number:</strong> <%= bed.bed_number %><br>
+                        <strong>Ward:</strong> <%= bed.ward_id.name %><br>
+                        <strong>Occupied:</strong> <%= bed.is_occupied ? 'Yes' : 'No' %><br>
+                        <% if (bed.patient_id) { %>
+                            <strong>Patient ID:</strong> <%= bed.patient_id %>
+                        <% } %>
+                    </li>
+                <% }) %>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Hospital Management</title>
+     <link rel="stylesheet" href="/styles.css">
+ </head>
+ <body>
+     <header>
+         <h1>Hospital Management System</h1>
+     </header>
+     
+     <main>
+         <section>
+             <h2>Admins</h2>
+             <ul>
+                 <% admin.forEach(admin => { %>
+                     <li>
+                         <strong>Name:</strong> <%= admin.name %><br>
+                         <strong>Email:</strong> <%= admin.email %><br>
+                         <strong>Contact Number:</strong> <%= admin.contact_number %><br>
+                         <strong>Wards:</strong>
+                         <ul>
+                             <% admin.ward_ids.forEach(ward => { %>
+                                 <li><%= ward.name %> - <%= ward.location %></li>
+                             <% }) %>
+                         </ul>
+                     </li>
+                 <% }) %>
+             </ul>
+         </section>
+ 
+         <section>
+             <h2>Wards</h2>
+             <ul>
+                 <% wards.forEach(ward => { %>
+                     <li>
+                         <strong>Name:</strong> <%= ward.name %><br>
+                         <strong>Location:</strong> <%= ward.location %><br>
+                         <strong>Total Beds:</strong> <%= ward.total_beds %><br>
+                         <strong>Admin:</strong> <%= ward.admin_id.name %><br>
+                     </li>
+                 <% }) %>
+             </ul>
+         </section>
+ 
+         <section>
+             <h2>Beds</h2>
+             <ul>
+                 <% beds.forEach(bed => { %>
+                     <li>
+                         <strong>Bed Number:</strong> <%= bed.bed_number %><br>
+                         <strong>Ward:</strong> <%= bed.ward_id.name %><br>
+                         <strong>Occupied:</strong> <%= bed.is_occupied ? 'Yes' : 'No' %><br>
+                         <% if (bed.patient_id) { %>
+                             <strong>Patient ID:</strong> <%= bed.patient_id %>
+                         <% } %>
+                     </li>
+                 <% }) %>
+             </ul>
+         </section>
+     </main>
+ </body>
+ </html>
+ 
